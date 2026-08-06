@@ -1,0 +1,31 @@
+{
+  "name": "ads",
+  "version": "1.0.0",
+  "description": "Lanza7 - landing page para servicio de creacion de sitios web y tiendas online en una semana",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "vendor:gsap": "cp node_modules/gsap/dist/gsap.min.js node_modules/gsap/dist/gsap.min.js.map node_modules/gsap/dist/ScrollTrigger.min.js node_modules/gsap/dist/ScrollTrigger.min.js.map ./js/vendor/",
+    "serve": "python3 -m http.server 4173",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adripuerta6188-droid/ads.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adripuerta6188-droid/ads/issues"
+  },
+  "homepage": "https://github.com/adripuerta6188-droid/ads#readme",
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../assets/fonts/PlusJakartaSans-Variable.woff2") format("woff2");
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-surface text-foreground antialiased;
+  }
+  ::selection {
+    @apply bg-accent/20 text-primary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto w-full max-w-container px-6 md:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-200 cursor-pointer select-none;
+    min-height: 44px;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white shadow-glow hover:bg-accent-light hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply btn border border-white/20 text-white hover:bg-white/10 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-dark {
+    @apply btn bg-primary text-white shadow-card hover:bg-primary-light hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-white p-6 shadow-soft transition-all duration-300 hover:shadow-card hover:-translate-y-1;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+}
